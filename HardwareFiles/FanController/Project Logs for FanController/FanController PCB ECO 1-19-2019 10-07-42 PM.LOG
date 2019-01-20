@@ -1,0 +1,6 @@
+Change Net Name : Old Net Name=PB0 New Net Name=PB0/MOSI
+Change Net Name : Old Net Name=PB1 New Net Name=PB1/MISO
+Change Net Name : Old Net Name=PB2 New Net Name=PB2/SCK
+Change Net Name : Old Net Name=PB5 New Net Name=PB5/RST
+Added Room: Name=?4
+Added Room: Name=FanController

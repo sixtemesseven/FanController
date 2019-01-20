@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=P3 Old Footprint=MOLX-22-05-3041_V New Footprint=MOLX-22-27-2041_V
+Change Component Comment : Designator=P3 Old Comment=22-05-3041 New Comment=22-27-2041
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Change component parameters: Designator = "P3"; Footprint = "MOLX-22-27-2041_V"; UniqueID = "\SWWVSDSN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Contact material"; Value = "Tinplatedbrass"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current rating"; Value = "4A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet URL"; Value = "http://www.molex.com/pdm_docs/sd/022272041_sd.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Version"; Value = "Rev. F, 06/2009"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing material"; Value = "Nylon(UL94V-0)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer URL"; Value = "http://www.molex.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating temperature"; Value = "0degCto+75degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage rating"; Value = "250V"; VariantName = "[No Variations]"

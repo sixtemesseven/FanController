@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [FanController.PrjPCB]
+   Generated File[FanController.TXT]
+   Generated File[FanController.LDP]
+   Generated File[FanController.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 16:00:57 On 10/07/2018

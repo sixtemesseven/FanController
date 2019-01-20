@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: FanController.PcbDoc   10/07/2018  16:00:57
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : FanController.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      28mil (0.711mm)                                           Round             30        PTH        0.00inch (0.00mm)
+T2      35mil (0.9mm)                                             Round             2         PTH        0.00inch (0.00mm)
+T3      40mil (1.02mm)                                            Round             6         PTH        0.00inch (0.00mm)
+T4      41mil (1.05mm)                                            Round             12        PTH        0.00inch (0.00mm)
+T5      47mil (1.19mm)                                            Round             7         PTH        0.00inch (0.00mm)
+T6      130mil (3.3mm)                                            Round             4         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              61
+
+Total Processing Time (hh:mm:ss) : 00:00:00

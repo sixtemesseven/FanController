@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=GND Pin=P2-1
+Removed Pin From Net: NetName=PIN Pin=P2-2
+Removed Pin From Net: NetName=GND Pin=P2-3
+Removed Member From Class: ClassName=FanController Member=P2
+Added Component: Designator=P?(MOLX-22-27-2031_V)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Contact material"; Value = "Tinplatedbrass"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current rating"; Value = "4A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0022272031_PCB_HEADERS.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "06/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing material"; Value = "Nylon(UL94V-0)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.molex.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating temperature"; Value = "0°Cto+75°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "Male Header, Pitch 2.54 mm, 1 x 3 Position, Height 11.7 mm, Tail Length 3.56 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "22-27-2031"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "http://www.molex.com/pdm_docs/sd/022272031_sd.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage rating"; Value = "250V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=PIN Pin=P?-2
+Added Pin To Net: NetName=GND Pin=P?-3
+Added Member To Class: ClassName=FanController Member=Component P? 22-27-2031
