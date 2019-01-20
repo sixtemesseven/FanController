@@ -1,54 +1,79 @@
-#include <SoftwareSerial.h>
-
-int fanPwmPin = 0;
-int fanMin = 50;
-int fanMax = 200;
-float scale = 0.3;
-
-float getTemperature(int pin, int average);
-
-#define rxPin 1
-#define txPin 0
-#define pwmPin 0
-
-
-// set up a new serial port
-//SoftwareSerial mySerial =  SoftwareSerial(rxPin, txPin);
-
-void setup() {
-
-  pinMode(pwmPin, OUTPUT);
-}
-
-void loop() {
-  //mySerial.print("Hello Attiny85");
-  //delay(100);
-
-  analogWrite(pwmPin,255);
-  /*
-  float temp1 = getTemperature(A1, 100);
-  int fan = int(temp1 * scale);
-  if(fan < fanMin)
-  {
-    fan = fanMin;
-  }
-  if(fan > fanMax)
-  {
-    fan = fanMax;
-  } 
-  analogWrite(fanPwmPin, fan);
-  delay(1000);
-  */
-}
+const int maxTemp = 85;
+const int minTemp = 20;
+const int minFan = 30;
+const int maxFan = 100;
+const int firstADC = 1;
+const int lastADC = 1;
+const int rxPin = 1;
+const int txPin = 0;
+const int pwmPin = 0;
+const int averageFilterSamples = 20;
+int getHighTemperature(int firstADC, int lastADC, int filter);
+void setFan(int percent);
 
 
-float getTemperature(int pin, int average)
+void setup() 
 {
-  int raw = 0;
-  for(int i = 0; i < average; i++)
+}
+
+
+void loop() 
+{
+  analogRead(A0);
+  analogWrite(pwmPin,10);
+  /*
+  int temp = 0;
+  temp = getHighTemperature(firstADC, lastADC, averageFilterSamples);
+  if(temp < minTemp)
   {
-    raw += analogRead(pin);
-    delay(5);
+    setFan(0, pwmPin);
   }
-  return(float(raw)/average);
+  else
+  {
+    setFan(((maxFan - minFan) / (maxTemp - minTemp) * temp), pwmPin);
+  } */
+}
+
+
+void setFan(int percent, int pin)
+{
+  if(percent < minFan)
+  {
+    analogWrite(pin, 0);
+  }
+  else
+  {
+  analogWrite(pin, ((maxFan * 255 / 100) * percent / 100));
+  }
+}
+
+
+int getHighTemperature(int firstADC, int lastADC, int filter)
+{ 
+  int largest = 0;
+  int filterT[4] = {0};
+  for(int i = 0; i < filter; i++)
+  {
+    for(int adc = firstADC; adc <= lastADC; adc++)
+    {
+      float temp;
+      temp = analogRead(adc)*5/1024.0;
+      temp = temp - 0.5;
+      temp = temp / 0.01;
+      filterT[adc] += int(temp);
+      delay(10);
+    }
+  }
+  for(int adc = firstADC; adc <= lastADC; adc++)
+  {
+    filterT[adc] = filterT[adc] / filter;
+  }
+  for(int adc = firstADC; adc <= lastADC; adc++)
+  {
+    if(largest < filterT[adc])
+    {
+      largest = filterT[adc];
+    }
+  }
+  return largest;
 }
